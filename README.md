@@ -7,7 +7,7 @@ Link Lurker is a Discord bot designed to monitor messages in a server, identify 
 ## Features
 
 - Monitors all messages in every channel for URLs.
-- Modifies URLs containing `instagram.com`, `x.com` `twitter.com`, `reddit.com` and `tiktok.com`:
+- Modifies URLs containing `instagram.com`, `x.com` `twitter.com`, `reddit.com` `tumblr.com` and `tiktok.com`:
   - Adds `dd` to the front of Instagram links (e.g., `www.instagram.com/whatever` becomes `www.ddinstagram.com/whatever`).
     - Created by [Wikidepia](https://github.com/Wikidepia/InstaFix)
   - Replaces `tiktok` with `tnk` in TikTok links (e.g., `www.tiktok.com/whatever` becomes `www.tnktok.com/whatever`).
@@ -16,6 +16,8 @@ Link Lurker is a Discord bot designed to monitor messages in a server, identify 
     - Created By [FixTweet](https://github.com/FixTweet/FxTwitter)
   - Replaces `reddit.com` with `vxreddit.com` in Reddit links (e.g., `www.reddit.com/whatever` becomes `www.vxreddit.com/whatever`).
     - Created by [dylanpdx](https://github.com/dylanpdx/vxReddit)
+  - Replace `tumblr.com` with `tpmblr.com` in Tumblr links (e.g., `www.tumblr.com/whatever` becomes `www.tpmblr.com/whatever`).
+    - Created By [knuxify](https://github.com/knuxify/fxtumblr)
 
 ## Prerequisites
 

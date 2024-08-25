@@ -15,6 +15,10 @@ const urlPatterns = [
     regex: /reddit\.com/gi,
     replacement: "vxreddit.com",
   },
+  {
+    regex: /tumblr\.com/gi,
+    replacement: "tpmblr.com",
+  },
 ];
 
 /**

@@ -41,6 +41,12 @@ const arrayOfRedditUrls = [
   "https://www.Reddit.com/r/this-is-a-test",
 ];
 
+const arrayOfTumblrUrls = [
+  "https://www.tumblr.com/this-is-a-test",
+  "http://www.tumblr.com/this-is-a-test",
+  "https://www.Tumblr.com/this-is-a-test",
+];
+
 describe("modifyUrls", () => {
   it("should modify TikTok URLs", () => {
     arrayOfTestUrls.forEach((url) => {
@@ -69,6 +75,12 @@ describe("modifyUrls", () => {
   it("should modify Reddit URLs", () => {
     arrayOfRedditUrls.forEach((url) => {
       expect(modifyUrls(url)).toMatch(/vxreddit\.com/);
+    });
+  });
+
+  it("should modify Tumblr URLs", () => {
+    arrayOfTumblrUrls.forEach((url) => {
+      expect(modifyUrls(url)).toMatch(/tpmblr\.com/);
     });
   });
 
