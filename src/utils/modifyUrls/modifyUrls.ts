@@ -1,18 +1,26 @@
+const urlPatterns = [
+  {
+    regex: /((https?:\/\/)?(www\.)?instagram\.com\/(?:p|reel)\/\S*)/gi,
+    replacement: "ddinstagram.com",
+  },
+  {
+    regex: /((https:\/\/)?(www\.)?tiktok\.com\/\S*)/gi,
+    replacement: "tnktok.com",
+  },
+  {
+    regex: /((https?:\/\/)?(www\.)?(twitter|x)\.com\/\S*)/gi,
+    replacement: "fxtwitter.com",
+  },
+];
+
 export const modifyUrls = (messageContent: string): string => {
-  const instagramRegex =
-    /((?:https?:\/\/)?(?:www\.)?instagram\.com\/(?:p|reel)\/([^/?#&]+)).*/g;
-  const tiktokRegex =
-    /^.*https:\/\/(?:m|www|vm)?\.?tiktok\.com\/((?:.*\b(?:(?:usr|v|embed|user|video)\/|\?shareId=|\&item_id=)(\d+))|\w+)\/?.*$/g;
-
-  let modifiedMessage = messageContent;
-
-  modifiedMessage = modifiedMessage.replace(instagramRegex, (match) =>
-    match.replace(/instagram\.com/, "ddinstagram.com")
+  return urlPatterns.reduce(
+    (modifiedMessage, { regex, replacement }) =>
+      modifiedMessage.replace(regex, (match) => {
+        const urlParts = match.split("/");
+        urlParts[2] = replacement;
+        return urlParts.join("/");
+      }),
+    messageContent
   );
-
-  modifiedMessage = modifiedMessage.replace(tiktokRegex, (match) =>
-    match.replace(/tiktok\.com/, "tnktok.com")
-  );
-
-  return modifiedMessage;
 };

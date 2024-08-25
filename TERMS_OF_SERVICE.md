@@ -8,7 +8,7 @@ By inviting, using, or interacting with the Link Lurker Discord bot, you agree t
 
 2. Description of Service
 
-Link Lurker is a Discord bot designed to monitor messages within your Discord server and modify specific URLs (such as Instagram and TikTok links) according to its intended functionality. The bot operates under the permissions granted by the server administrator.
+Link Lurker is a Discord bot designed to monitor messages within your Discord server and modify specific URLs (such as Instagram, X and TikTok links) according to its intended functionality. The bot operates under the permissions granted by the server administrator.
 
 3. User Responsibilities
 

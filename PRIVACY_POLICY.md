@@ -10,7 +10,7 @@ Thank you for using Link Lurker. This Privacy Policy explains how we collect, us
 
 2.1. Data Collected Automatically
 
-    •	Message Content: Link Lurker reads the content of messages in channels where it is active, specifically to identify and modify URLs from Instagram and TikTok. The bot does not store message content permanently.
+    •	Message Content: Link Lurker reads the content of messages in channels where it is active, specifically to identify and modify URLs from Instagram, X and TikTok. The bot does not store message content permanently.
     •	User IDs: The bot may temporarily log user IDs to respond to commands or perform its functionalities but does not retain this information long-term.
 
 2.2. Data Collected Voluntarily
