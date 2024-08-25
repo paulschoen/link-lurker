@@ -1,7 +1,7 @@
 const urlPatterns = [
   {
     regex: /instagram\.com/gi,
-    replacement: "ddinstagram.com",
+    replacement: "g.ddinstagram.com",
   },
   {
     regex: /tiktok\.com/gi,

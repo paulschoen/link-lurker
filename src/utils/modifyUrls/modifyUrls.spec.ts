@@ -56,7 +56,7 @@ describe("modifyUrls", () => {
 
   it("should modify Instagram URLs", () => {
     arrayOfInstagramUrls.forEach((url) => {
-      expect(modifyUrls(url)).toMatch(/ddinstagram\.com/);
+      expect(modifyUrls(url)).toMatch(/g\.ddinstagram\.com/);
     });
   });
 
