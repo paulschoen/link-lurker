@@ -3,8 +3,8 @@ import { processMessage } from "../../../utils/processMessage";
 
 module.exports = {
   name: Events.MessageCreate,
-  execute(message: Message) {
-    const result = processMessage(message);
+  async execute(message: Message) {
+    const result = await processMessage(message);
     if (result) {
       message.reply(result);
     }
