@@ -28,3 +28,7 @@ export const modifyUrls = (messageContent: string): string => {
     messageContent
   );
 };
+
+export const containsEvilUrl = (messageContent: string): boolean => {
+  return urlPatterns.some(({ regex }) => regex.test(messageContent));
+};
