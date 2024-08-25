@@ -2,6 +2,8 @@
 
 Link Lurker is a Discord bot designed to monitor messages in a server, identify specific URLs, and modify them according to predefined rules.
 
+[Link to Add Link Lurker to Discord Servers](https://discord.com/oauth2/authorize?client_id=1277099038218653748&permissions=92160&integration_type=0&scope=bot)
+
 ## Features
 
 - Monitors all messages in every channel for URLs.
