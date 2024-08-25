@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx src/main.ts",
+    "build": "tsc",
+    "start:prod": "node dist/src/main.js",
     "test": "jest"
   },
   "keywords": [],
