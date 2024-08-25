@@ -40,6 +40,14 @@ const arrayOfTwitterUrls = [
   "https://www.Twitter.com/this-is-a-test",
 ];
 
+const arrayOfRedditUrls = [
+  "https://www.reddit.com/r/this-is-a-test",
+  "http://www.reddit.com/r/this-is-a-test",
+  "www.reddit.com/r/this-is-a-test",
+  "reddit.com/r/this-is-a-test",
+  "https://www.Reddit.com/r/this-is-a-test",
+];
+
 describe("modifyUrls", () => {
   it("should modify TikTok URLs", () => {
     arrayOfTestUrls.forEach((url) => {
@@ -66,6 +74,13 @@ describe("modifyUrls", () => {
     arrayOfTwitterUrls.forEach((url) => {
       console.log(modifyUrls(url));
       expect(modifyUrls(url)).toMatch(/fxtwitter\.com/);
+    });
+  });
+
+  it("should modify Reddit URLs", () => {
+    arrayOfRedditUrls.forEach((url) => {
+      console.log(modifyUrls(url));
+      expect(modifyUrls(url)).toMatch(/vxreddit\.com/);
     });
   });
 

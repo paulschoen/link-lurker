@@ -11,6 +11,10 @@ const urlPatterns = [
     regex: /((https?:\/\/)?(www\.)?(twitter|x)\.com\/\S*)/gi,
     replacement: "fxtwitter.com",
   },
+  {
+    regex: /((https?:\/\/)?(www\.)?reddit\.com\/\S*)/gi,
+    replacement: "vxreddit.com",
+  },
 ];
 
 export const modifyUrls = (messageContent: string): string => {
