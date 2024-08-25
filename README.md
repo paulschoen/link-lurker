@@ -1,7 +1,8 @@
-
 # Link Lurker Discord Bot
 
 Link Lurker is a Discord bot designed to monitor messages in a server, identify specific URLs, and modify them according to predefined rules.
+
+Testing
 
 ## Features
 
@@ -19,17 +20,20 @@ Link Lurker is a Discord bot designed to monitor messages in a server, identify 
 ## Setup
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/yourusername/link-lurker-bot.git
    cd link-lurker-bot
    ```
 
 2. **Install the dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Create a `.env` file in the root directory and add your Discord bot token:**
+
    ```bash
    DISCORD_TOKEN=your-discord-bot-token
    ```
