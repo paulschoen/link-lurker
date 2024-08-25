@@ -5,18 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx src/main.ts",
+    "build": "tsc",
+    "start:prod": "node dist/src/main.js",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.15.3",
-    "dotenv": "^16.4.5",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.5.0",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -33,5 +35,8 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "devDependencies": {
+    "jest-junit": "^16.0.0"
   }
 }
