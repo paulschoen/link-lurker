@@ -1,6 +1,6 @@
 const urlPatterns = [
   {
-    regex: /instagram\.com/gi,
+    regex: /(?<!dd)instagram\.com/gi,
     replacement: "g.ddinstagram.com",
   },
   {
@@ -8,15 +8,15 @@ const urlPatterns = [
     replacement: "tnktok.com",
   },
   {
-    regex: /(twitter|x)\.com/gi,
+    regex: /(?<!fx)(twitter|x)\.com/gi,
     replacement: "fxtwitter.com",
   },
   {
-    regex: /reddit\.com/gi,
+    regex: /(?<!vx)reddit\.com/gi,
     replacement: "vxreddit.com",
   },
   {
-    regex: /tumblr\.com/gi,
+    regex: /(?<!tp)tumblr\.com/gi,
     replacement: "tpmblr.com",
   },
 ];

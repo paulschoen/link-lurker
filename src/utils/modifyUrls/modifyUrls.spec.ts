@@ -106,7 +106,7 @@ describe("modifyUrls", () => {
     const message =
       "Check out this TikTok: https://www.tiktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.instagram.com/p/CHeENTUjysv/";
     const modifiedMessage =
-      "Check out this TikTok: https://www.tnktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.ddinstagram.com/p/CHeENTUjysv/";
+      "Check out this TikTok: https://www.tnktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.g.ddinstagram.com/p/CHeENTUjysv/";
     expect(modifyUrls(message)).toBe(modifiedMessage);
   });
 
@@ -121,7 +121,7 @@ describe("modifyUrls", () => {
 
     const expectedModifiedUrls = [
       "https://tnktok.com/h5/share/usr/6641141594707361797.html",
-      "https://ddinstagram.com/p/CHeENTUjysv/",
+      "https://g.ddinstagram.com/p/CHeENTUjysv/",
       "https://fxtwitter.com/this-is-a-test",
       "https://fxtwitter.com/this-is-a-test",
       "https://vxreddit.com/r/this-is-a-test",
