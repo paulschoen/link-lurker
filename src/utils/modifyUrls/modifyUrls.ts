@@ -1,8 +1,9 @@
 const urlPatterns = [
-  {
-    regex: /(?<!dd)instagram\.com/gi,
-    replacement: "g.ddinstagram.com",
-  },
+  // Disabling instagram replacement for now since the service is not available
+  // {
+  //   regex: /(?<!dd)instagram\.com/gi,
+  //   replacement: "g.ddinstagram.com",
+  // },
   {
     regex: /tiktok\.com/gi,
     replacement: "tnktok.com",
@@ -18,6 +19,10 @@ const urlPatterns = [
   {
     regex: /(?<!tp)tumblr\.com/gi,
     replacement: "tpmblr.com",
+  },
+  {
+    regex: /bsky\.app/gi,
+    replacement: "cbsky.app",
   },
 ];
 
