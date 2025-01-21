@@ -1,9 +1,9 @@
 const urlPatterns = [
   // Disabling instagram replacement for now since the service is not available
-  // {
-  //   regex: /(?<!dd)instagram\.com/gi,
-  //   replacement: "g.ddinstagram.com",
-  // },
+  {
+    regex: /instagram\.com/gi,
+    replacement: "instagramez.com",
+  },
   {
     regex: /tiktok\.com/gi,
     replacement: "tnktok.com",
