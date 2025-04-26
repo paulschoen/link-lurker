@@ -5,6 +5,10 @@ const urlPatterns = [
   //   replacement: "g.ddinstagram.com",
   // },
   {
+    regex: /(?<!dd)instagram\.com/gi,
+    replacement: "g.ddinstagram.com",
+  },
+  {
     regex: /tiktok\.com/gi,
     replacement: "tnktok.com",
   },
