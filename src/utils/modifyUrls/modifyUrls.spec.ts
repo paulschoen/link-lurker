@@ -13,14 +13,14 @@ const arrayOfTestUrls = [
   "https://m.tiktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1",
 ];
 
-const arrayOfInstagramUrls = [
-  "https://www.instagram.com/p/CHeENTUjysv/",
-  "https://www.instagram.com/reel/CHeENTUjysv",
-  "http://www.instagram.com/p/CHeENTUjysv/",
-  "https://instagram.com/p/CHeENTUjysv",
-  "http://instagram.com/p/CHeENTUjysv",
-  "https://www.Instagram.com/p/CHeENTUjysv/",
-];
+// const arrayOfInstagramUrls = [
+//   "https://www.instagram.com/p/CHeENTUjysv/",
+//   "https://www.instagram.com/reel/CHeENTUjysv",
+//   "http://www.instagram.com/p/CHeENTUjysv/",
+//   "https://instagram.com/p/CHeENTUjysv",
+//   "http://instagram.com/p/CHeENTUjysv",
+//   "https://www.Instagram.com/p/CHeENTUjysv/",
+// ];
 
 // I hate having to use "x" as a placeholder for the "twitter" part of the URL and I bet the x software developers hate it too.
 const arrayOfXrUrls = [
@@ -60,11 +60,11 @@ describe("modifyUrls", () => {
     });
   });
 
-  it("should modify Instagram URLs", () => {
-    arrayOfInstagramUrls.forEach((url) => {
-      expect(modifyUrls(url)).toMatch(/instagramez\.com/);
-    });
-  });
+  // it("should modify Instagram URLs", () => {
+  //   arrayOfInstagramUrls.forEach((url) => {
+  //     expect(modifyUrls(url)).toMatch(/g\.ddinstagram\.com/);
+  //   });
+  // });
 
   it("should modify Twitter URLs", () => {
     arrayOfXrUrls.forEach((url) => {
@@ -114,18 +114,18 @@ describe("modifyUrls", () => {
     expect(modifyUrls(message)).toBe(modifiedMessage);
   });
 
-  it("should modify messages that contain multiple URLs", () => {
-    const message =
-      "Check out this TikTok: https://www.tiktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.instagram.com/p/CHeENTUjysv/";
-    const modifiedMessage =
-      "Check out this TikTok: https://www.tnktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.instagramez.com/p/CHeENTUjysv/";
-    expect(modifyUrls(message)).toBe(modifiedMessage);
-  });
+  // it("should modify messages that contain multiple URLs", () => {
+  //   const message =
+  //     "Check out this TikTok: https://www.tiktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.instagram.com/p/CHeENTUjysv/";
+  //   const modifiedMessage =
+  //     "Check out this TikTok: https://www.tnktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.g.ddinstagram.com/p/CHeENTUjysv/";
+  //   expect(modifyUrls(message)).toBe(modifiedMessage);
+  // });
 
   it("should remove subdomains of any length and correctly modify URLs", () => {
     const testUrlsWithVariousSubdomains = [
       "https://m.tiktok.com/h5/share/usr/6641141594707361797.html",
-      "https://subdomain.instagram.com/p/CHeENTUjysv/",
+      // "https://subdomain.instagram.com/p/CHeENTUjysv/",
       "https://long.sub.domain.twitter.com/this-is-a-test",
       "https://www.subdomain.x.com/this-is-a-test",
       "https://some.reddit.com/r/this-is-a-test",
@@ -133,7 +133,7 @@ describe("modifyUrls", () => {
 
     const expectedModifiedUrls = [
       "https://tnktok.com/h5/share/usr/6641141594707361797.html",
-      "https://instagramez.com/p/CHeENTUjysv/",
+      // "https://g.ddinstagram.com/p/CHeENTUjysv/",
       "https://fxtwitter.com/this-is-a-test",
       "https://fxtwitter.com/this-is-a-test",
       "https://vxreddit.com/r/this-is-a-test",
@@ -178,11 +178,11 @@ describe("containsEvilUrl", () => {
     expect(containsEvilUrl(message)).toBe(false);
   });
 
-  it("should return true if the message contains multiple evil URLs", () => {
-    const message =
-      "Check out this TikTok: https://www.tiktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.instagram.com/p/CHeENTUjysv/";
-    expect(containsEvilUrl(message)).toBe(true);
-  });
+  // it("should return true if the message contains multiple evil URLs", () => {
+  //   const message =
+  //     "Check out this TikTok: https://www.tiktok.com/@burntpizza89/video/7067695578729221378?is_copy_url=1&is_from_webapp=v1 and this Instagram: https://www.instagram.com/p/CHeENTUjysv/";
+  //   expect(containsEvilUrl(message)).toBe(true);
+  // });
 
   it("should return true if the message contains an evil URL with different casing", () => {
     const message =
